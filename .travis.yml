@@ -1,6 +1,5 @@
 language: ruby
 script: rspec
-bundler_args: --without development
 before_install:
   - 'test "$CQL_ENABLE_AUTH" = "1" && sudo perl -pi -e "s/(?<=authenticator: )AllowAllAuthenticator/PasswordAuthenticator/" /usr/local/cassandra/conf/cassandra.yaml && echo "Authentication enabled" || echo "Authentication disabled"'
   - 'test "$CQL_ENABLE_AUTH" = "1" && sudo service cassandra restart || :'

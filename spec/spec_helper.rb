@@ -2,8 +2,6 @@
 
 ENV['CASSANDRA_HOST'] ||= 'localhost'
 
-require 'bundler/setup'
-
 require 'support/bytes_helper'
 require 'support/await_helper'
 require 'support/fake_io_reactor'
